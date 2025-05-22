@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventTicket Pro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">EventTicket Pro</div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#create">Create</a></li>
+                <li><a href="#tickets">My Tickets</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <button id="loginBtn">Login</button>
+            <button id="registerBtn">Register</button>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Manage Your Event Tickets</h1>
+            <p>Create, sell and manage event tickets with ease</p>
+            <button id="createEventBtn">Create Event</button>
+        </section>
+        <section id="events" class="events-section">
+            <h2>Upcoming Events</h2>
+            <div class="filter-controls">
+                <input type="text" id="searchEvents" placeholder="Search events...">
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="music">Music</option>
+                    <option value="sports">Sports</option>
+                    <option value="art">Art</option>
+                    <option value="business">Business</option>
+                </select>
+            </div>
+            <div class="events-grid" id="eventsContainer"></div>
+        </section>
+        <section id="create" class="create-section">
+            <h2>Create New Event</h2>
+            <form id="eventForm">
+                <div class="form-group">
+                    <label for="eventName">Event Name</label>
+                    <input type="text" id="eventName" required>
+                </div>
+                <div class="form-group">
+                    <label for="eventDate">Date</label>
+                    <input type="datetime-local" id="eventDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="eventLocation">Location</label>
+                    <input type="text" id="eventLocation" required>
+                </div>
+                <div class="form-group">
+                    <label for="eventCategory">Category</label>
+                    <select id="eventCategory" required>
+                        <option value="music">Music</option>
+                        <option value="sports">Sports</option>
+                        <option value="art">Art</option>
+                        <option value="business">Business</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="eventDescription">Description</label>
+                    <textarea id="eventDescription" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="eventImage">Image URL</label>
+                    <input type="url" id="eventImage" required>
+                </div>
+                <div class="form-group">
+                    <label for="ticketPrice">Ticket Price ($)</label>
+                    <input type="number" id="ticketPrice" min="0" step="0.01" required>
+                </div>
